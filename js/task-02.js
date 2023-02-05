@@ -8,13 +8,23 @@ const ingredients = [
 ];
 
 const list = document.querySelector("#ingredients");
-const ingradientsEl = [];
-console.log(list);
-ingredients.forEach( element =>{
-const ingradEl = document.createElement('li');
-ingradEl.textContent = element;
-ingradEl.classList.add('item');
-ingradientsEl.push(ingradEl);
+
+//-------------------About .map(), second option
+const ingradientsEl = ingredients.map(option =>{
+  const ingradEl = document.createElement('li');
+  ingradEl.textContent = option;
+  ingradEl.classList.add('item');
+ return ingradEl;
 });
+
+//---------------------Old school, first option)
+// const ingradientsEl = [];
+// ingredients.forEach( element =>{
+// const ingradEl = document.createElement('li');
+// ingradEl.textContent = element;
+// ingradEl.classList.add('item');
+// ingradientsEl.push(ingradEl);
+// });
+
 list.append(...ingradientsEl);
 
