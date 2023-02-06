@@ -22,9 +22,9 @@ const galleryItem = document.createElement('li');
 const galleryImage = document.createElement('img');
 
 const elMarkup = images.map((image) =>`<li><img src = ${image.url} alt= ${image.alt} width = 360 ></img></li>`).join("");
-console.log(elMarkup);
+//console.log(elMarkup);
 galleryElement.insertAdjacentHTML("beforeend", elMarkup);
-console.log(galleryElement);
+//console.log(galleryElement);
 
 
 
