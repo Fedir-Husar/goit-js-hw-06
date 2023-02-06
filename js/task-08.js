@@ -1,8 +1,6 @@
 const form = document.querySelector('.login-form');
-
+console.log(form);
 form.addEventListener("submit", submitHandler);
-
-
 
 function submitHandler(event) {
   event.preventDefault();
@@ -12,7 +10,7 @@ function submitHandler(event) {
         return alert("Error, all fields must be filled!");
     } 
     else {
-         console.log(`Email: ${email.value}, Password: ${password.value}`);
+         console.log({ "Email": email.value, "Password": password.value });
          event.currentTarget.reset();
     }
 }
